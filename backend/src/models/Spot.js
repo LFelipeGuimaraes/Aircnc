@@ -15,8 +15,10 @@ const SpotSchema = new mongoose.Schema({
     },
 });
 
-// cria uma url para thumbnail
-// nessa rota serao servida as imagens das empresas (inseridas pelo usuario)
+// Cria uma url para a rota que servira as imagens inseridas
+// pelo usuario.
+// Esse atributo é computado em tempo de execução e
+// não é armazenado no banco.
 SpotSchema.virtual('thumbnail_url').get(function() {
     return `http://localhost:3333/files/${this.thumbnail}`;
 });
