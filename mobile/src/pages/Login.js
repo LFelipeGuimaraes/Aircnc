@@ -26,7 +26,7 @@ export default function Login({ navigation }) {
         await AsyncStorage.setItem('user', _id);
         await AsyncStorage.setItem('techs', techs);
 
-        navigation.navigate('List');
+        navigation.navigate('Main');
     }
 
     return (

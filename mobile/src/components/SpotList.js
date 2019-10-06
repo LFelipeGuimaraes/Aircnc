@@ -17,7 +17,6 @@ function SpotList({ tech, navigation }) {
             response.data.map((spot) => {
                 newUrl = spot.thumbnail_url.replace('localhost', '192.168.0.107');
                 spot.thumbnail_url = newUrl;
-                console.log(spot.thumbnail_url);
             });
             
             setSpots(response.data);
