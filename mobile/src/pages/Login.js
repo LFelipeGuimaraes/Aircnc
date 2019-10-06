@@ -10,13 +10,13 @@ export default function Login({ navigation }) {
     const [techs, setTechs] = useState('');
 
     // Impede que volte para tela de login ao recarregar tela
-    useEffect(() => {
-        AsyncStorage.getItem('user').then(user => {
-            if (user) {
-                navigation.navigate('List');
-            }
-        })
-    }, []);
+    // useEffect(() => {
+    //     AsyncStorage.getItem('user').then(user => {
+    //         if (user) {
+    //             navigation.navigate('List');
+    //         }
+    //     })
+    // }, []);
 
     async function handleSubmit() {
         const response = await api.post('/sessions', { email });

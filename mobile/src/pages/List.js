@@ -1,6 +1,6 @@
-import React, { useState, useEffect, Alert } from 'react';
+import React, { useState, useEffect } from 'react';
 import socketio from 'socket.io-client';
-import { SafeAreaView, ScrollView, StyleSheet, Image, AsyncStorage } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Image, AsyncStorage, Alert } from 'react-native';
 
 import SpotList from '../components/SpotList';
 

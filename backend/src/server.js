@@ -24,8 +24,7 @@ const connectedUsers = {};
 io.on('connection', socket => {
     const { user_id } = socket.handshake.query;
 
-    connectedUsers[user_id] = socket.id
-    console.log(socket.id);
+    connectedUsers[user_id] = socket.id;
 });
 
 // middleware que adiciona à requisição o websocket e os usuários conectados
